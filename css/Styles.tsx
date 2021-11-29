@@ -37,8 +37,8 @@ export const styles = StyleSheet.create({
         color:"teal",
     },
     btncadastrar:{
-        position:'absolute',
-        bottom:100,
+        //position:'absolute',
+        //bottom:100,
         backgroundColor:'#000',
         padding:20,
         borderRadius:50,
@@ -46,8 +46,13 @@ export const styles = StyleSheet.create({
     txtbtncadastrar:{
         fontSize:20,
         fontWeight:"bold",
-        color:"#A3B5D1",
+        color:"teal",
         textTransform:"uppercase"
 
-    }
-})
+    },
+    titulo:{
+        fontSize:30,
+        fontWeight:"bold",
+        textAlign:"center"
+    },
+});
