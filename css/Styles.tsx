@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
-    conteiner:{
+    container:{
         flex:1,
         justifyContent:'center',
         alignItems:'center'
@@ -51,8 +51,47 @@ export const styles = StyleSheet.create({
 
     },
     titulo:{
-        fontSize:30,
-        fontWeight:"bold",
-        textAlign:"center"
+       fontSize:30,
+       fontWeight:"bold",
+       textAlign:"center"
     },
+    imgcliente:{
+       width:'100%',
+       height:200,
+       resizeMode:"cover"
+    },
+    cliente:{
+      padding:15,
+      backgroundColor:'#fff',
+      shadowColor:'silver',
+      shadowOffset:{width:10,height:10},
+      shadowOpacity:1,
+      shadowRadius:20,
+      elevation:10,
+      margin:10,
+    },
+    nome:{
+      fontSize:15,
+      fontWeight:'bold',
+      color:'black'
+    },
+    cpf:{
+        fontSize:12,
+        fontWeight:'bold',
+        color:'#6B626E'
+    },
+    email:{
+        fontSize:15,
+        color:'#AF3647',
+        fontWeight:"bold"
+    },
+    usuario:{
+        fontSize:15,
+        color:"teal",
+        fontWeight:"bold"
+    },
+    scroll:{
+        width:"100%",
+    },
+
 });

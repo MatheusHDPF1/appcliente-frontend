@@ -21,7 +21,7 @@ export default function Cadastro(){
 
 
     return(
-        <View style={styles.conteiner}>
+        <View style={styles.container}>
             <Text style={styles.titulo}>Cadastro Cliente</Text>
             <View style={styles.controles}>
                 <TextInput placeholder="Nome do Cliente" style={styles.input}onChangeText={(value)=>setNomeCliente(value)} 

@@ -14,7 +14,7 @@ export default function Login({navigation}){
     const [ senha, setSenha] = React.useState("")
 
     return(
-        <View style={styles.conteiner}>
+        <View style={styles.container}>
           <Image source={require("../assets/icon.png")} style={styles.imglogo}/>
 
            <View style={styles.controles}>
