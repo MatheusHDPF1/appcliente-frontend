@@ -60,7 +60,7 @@ export default function Home({route}){
                        <Text style={styles.email}>E-mail:{item.email}</Text>
                        <Text style={styles.usuario}>Usuario:{item.usuario}</Text>
                        <TouchableOpacity onPress={()=>{
-                           navigation.navigate("Atualizar",{cliente:item})
+                           navigation.navigate("Atualizar",{cliente:item,token:rs})
                       }}
                       >
                          <FontAwesome5 name="user-edit" size={20} color="black" />

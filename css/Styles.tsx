@@ -4,7 +4,8 @@ export const styles = StyleSheet.create({
     container:{
         flex:1,
         justifyContent:'center',
-        alignItems:'center'
+        alignItems:'center',
+        backgroundColor:"white"
     },
     imglogo:{
         width:100,
@@ -93,5 +94,18 @@ export const styles = StyleSheet.create({
     scroll:{
         width:"100%",
     },
+    apagar:{
+        textAlign:"center",
+        padding:20,
+        width:"80%",
+        borderRadius:10,
+        borderWidth:1,
+        borderColor:'red'
+    },
+    txtbtnapagar:{
+        fontSize:15,
+        textAlign:"center",
+        fontWeight:"bold"
+    }
 
 });
