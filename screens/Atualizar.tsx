@@ -80,7 +80,7 @@ function efetuarAtualizacao(){
 
 function excluirUsuario(){
 
-    let r = false
+    var r = false
 
     Alert.alert("Atenção","Você deseja mesmo apagar esta conta?",[
         {
@@ -89,28 +89,25 @@ function excluirUsuario(){
         },
         {
             text:"Apagar",
-            onPress:()=> r = true,
+            onPress:()=> { 
+                fetch(`${server}/apagar/${idcliente}`,{
+                method:"DELETE",
+                headers:{
+                    accept:"application/json",
+                    "content-type":"application/json",
+                    "token":rs
+                }    
+            }).then((response)=>response.status)
+            .then((dados)=>{
+                if(dados.toString() == "204") {
+                     Alert.alert("Apagado", "Conta excluida")
+                }
+                else{
+                    Alert.alert("Atenção", "Não foi possível apagar conta")
+                }
+            })
+            .catch((erro)=>console.error(`Erro ao ler a api -> ${erro}`))}
         },
     ])
-
-    if(r){
-        fetch(`${server}/apagar/${idcliente}`,{
-            method:"DELETE",
-            headers:{
-                accept:"application/json",
-                "content-type":"application/json",
-                "token":rs
-            }    
-        }).then((response)=>response.json())
-        .then((dados)=>{
-            if(!dados){
-                return Alert.alert("Apagado", "Conta excluida")
-            }
-            else{
-                Alert.alert("Atenção",dados.output)
-            }
-        })
-        .catch((erro)=>console.error(`Erro ao ler a api -> ${erro}`))
-    }
 
 }
